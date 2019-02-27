@@ -10,15 +10,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @SuppressWarnings("deprecation")
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = App.class)
+@SpringApplicationConfiguration(classes = RabbitSenderApp.class)
 public class HelloApplicationTests {
     @Autowired
     private Sender sender;
     @Test
     public void hello() throws Exception {
+    	int i = 0;
     	while(true){
-    	 sender.send();
+    		i++;
+    		sender.send();
     		Thread.sleep(1000);
+    		if(i>3){
+    			break;
+    		}
     	}
        
     }

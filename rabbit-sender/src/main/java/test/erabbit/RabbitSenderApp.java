@@ -5,9 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class App {
+public class RabbitSenderApp {
     public static void main(String[] args) {
     	//http://localhost:15672/
-        SpringApplication.run(App.class, args);
+        SpringApplication.run(RabbitSenderApp.class, args);
     }
 }
