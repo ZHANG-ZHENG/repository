@@ -26,6 +26,11 @@ public class TestController{
     @Autowired
     private Sender sender;
 
+	@RequestMapping("/test0")
+	public String test0() {
+		return "test0";
+
+	}
 	
 //	 @Autowired
 //	 private LoadBalancerClient loadBalancerClient;
